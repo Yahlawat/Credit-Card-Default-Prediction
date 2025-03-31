@@ -27,7 +27,7 @@ The dataset contains information on default payments, demographic factors, credi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yahlawat/credit-card-default-prediction.git
+git clone https://github.com/Yahlawat/Credit-Card-Default-Prediction.git
 cd credit-card-default-prediction
 ```
 
