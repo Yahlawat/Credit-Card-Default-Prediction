@@ -20,3 +20,6 @@ ipykernel>=6.25.1
 
 ## Utilities
 time>=1.8.0
+
+# warnings
+warnings>=0.17.1
