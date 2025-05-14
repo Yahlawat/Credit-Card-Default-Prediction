@@ -3,7 +3,7 @@
 
 This project predicts credit card default payments using machine learning models, with a focus on tree-based ensemble methods. The analysis is based on a dataset of Taiwanese credit card clients and emphasizes model evaluation, interpretability, and performance comparison.
 
-<img src="./Images/logo.png" width="300" alt="UFC Logo">
+<img src="./Images/logo.png" width="300" alt="Logo">
 
 ## Steps & Techniques Used
 
