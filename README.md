@@ -1,6 +1,25 @@
+
 # Credit Card Default Prediction
 
-This project focuses on predicting credit card default payments using machine learning gradient boosting techniques. The analysis is performed on a dataset from Taiwanese credit card clients, comparing the performance of various models including Random Forest, AdaBoost, XGBoost, LightGBM, and CatBoost.
+This project predicts credit card default payments using machine learning models, with a focus on tree-based ensemble methods. The analysis is based on a dataset of Taiwanese credit card clients and emphasizes model evaluation, interpretability, and performance comparison.
+
+<img src="./Images/logo.png" width="300" alt="UFC Logo">
+
+## Steps & Techniques Used
+
+- **Data Preprocessing**: Cleaning, categorical encoding, and feature engineering (e.g., delay trends, utilization ratios)
+- **Class Imbalance Handling**: Applied SMOTE to oversample the minority class (defaulters)
+- **Model Training**: Built and tuned Logistic Regression, Random Forest, AdaBoost, XGBoost, LightGBM, and CatBoost models using pipelines and RandomizedSearchCV
+- **Model Evaluation**: Measured performance using F1 score, ROC AUC, confusion matrices, and ROC curves
+- **Feature Importance**: Compared top predictors across tree-based models
+
+## Results & Insights
+
+- **Best Overall Models**: Random Forest and XGBoost offered the best balance of F1 score and recall, significantly outperforming a random baseline.
+- **Key Predictors**: Max payment delay, credit limit, utilization ratios, and payment trends were the most influential features.
+- **Interpretation**: Demographics had lower standalone importance but contributed through interactions.
+- **Conclusion**: Ensemble models are well-suited for credit risk prediction, especially under class imbalance.
+
 
 ## Project Structure
 
@@ -8,70 +27,30 @@ This project focuses on predicting credit card default payments using machine le
 .
 ├── notebooks/
 │   └── default_prediction.ipynb    # Main analysis notebook
-├── requirements.txt               # Project dependencies
-└── README.md                      # Project documentation
+├── requirements.txt                # Project dependencies
+├── README.md                       # Project documentation
+└── Images                          # Project Logo
+
 ```
 
-## Dataset Information
+## Dataset Summary 
 
-The dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005.
+The dataset includes 30,000 records of credit card clients in Taiwan, covering demographic information, bill and payment history, and default status over a 6-month period. [Dataset on Kaggle](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset/data)
 
-### Features
-- **Demographic Information**: ID, LIMIT_BAL, SEX, EDUCATION, MARRIAGE, AGE
-- **Payment History**: PAY_0 to PAY_6 (Repayment status from September to April 2005)
-- **Bill Amounts**: BILL_AMT1 to BILL_AMT6 (Amount of bill statement)
-- **Payment Amounts**: PAY_AMT1 to PAY_AMT6 (Amount of previous payment)
-- **Target Variable**: default.payment.next.month (1=yes, 0=no)
+### Key Feature Groups
+- **Demographics**: Age, Sex, Education, Marriage
+- **Payment Behavior**: PAY_0 to PAY_6 (monthly repayment status)
+- **Financials**: BILL_AMT1–6, PAY_AMT1–6, LIMIT_BAL
+- **Target**: default.payment.next.month (1 = default, 0 = no default)
 
-## Setup and Installation
+## Setup Instructions
 
-1. Clone the repository:
 ```bash
 git clone https://github.com/Yahlawat/Credit-Card-Default-Prediction.git
 cd credit-card-default-prediction
-```
 
-2. Create and activate a virtual environment:
-```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-```
 
-3. Install required packages:
-```bash
 pip install -r requirements.txt
 ```
-
-## Usage
-
-1. Open the Jupyter notebook:
-```bash
-jupyter notebook notebooks/default_prediction.ipynb
-```
-
-2. Follow the notebook cells to:
-   - Load and preprocess the data
-   - Perform exploratory data analysis
-   - Train and evaluate different models
-   - Analyze feature importance
-   - Compare model performance
-
-## Models Implemented
-
-- Random Forest
-- AdaBoost
-- XGBoost
-- LightGBM
-- CatBoost
-
-## Results
-
-The notebook includes comprehensive analysis of:
-- Model performance metrics (accuracy, precision, recall, F1-score)
-- ROC curves and AUC scores
-- Feature importance analysis
-- Model comparison and selection
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
