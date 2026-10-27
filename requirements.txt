@@ -1,26 +1,19 @@
-## Data Science Libraries
+# Data
 pandas>=2.1.4
 numpy>=1.26.2
 scipy>=1.11.4
 
-## Data Visualization Libraries
+# Visualization
 matplotlib>=3.8.2
 seaborn>=0.13.0
 
-## Machine Learning Libraries
-scikit-learn>=1.3.2
+# Machine learning
+scikit-learn>=1.8
+imbalanced-learn>=0.12
 xgboost>=2.0.2
 lightgbm>=4.1.0
-catboost>=1.1.1
-imblearn
+catboost>=1.2
 
-## Jupyter and Notebook Libraries
+# Notebook
 jupyter>=1.0.0
-notebook>=7.0.6
 ipykernel>=6.25.1
-
-## Utilities
-time>=1.8.0
-
-# warnings
-warnings>=0.17.1
